@@ -1,0 +1,23 @@
+Role (id_role PK, libelle_role)
+
+Responsable (responsable_id PK, responsable_nom, responsable_prenom)
+
+Classe de Formation (code_classe_formation PK, libelle_court_classe_formation, Libelle_long_classe_formation, titre_professionnel_lie_classe_formation, date_debut_classe_formation, Date_de_Fin_classe_formation, id_assistant FK)
+
+Titre professionnel (id_titre_professionnel PK, niveau_titre_professionnel, Libelle_titre_professionnel, date_validite_titre_professionnel)
+
+Entreprise (id_siret_entreprise PK, raison_social_entreprise, adresse_entreprise, code_postal_entreprise, ville_entreprise, nom_dirigeant_entreprise, prenom_dirigeant_entreprise)
+
+Tuteur (id_tuteur PK, nom_tuteur, prenom_tuteur, telephone_tuteur, adresse_mail_tuteur, id_Siret FK)
+
+Etudiant (carte_identite_etudiant PK, nom, prenom, email, annee_d_experience, adresse, code_postal, ville, telephone, niveau_etude, id_Siret FK)
+
+Intervenant (id_siret_intervenant PK, nom_intervenant, prenom_intervenant, specialite_intervenant, statut_intervenant, adresse_intervenant, code_postal_intervenant, ville_intervenant)
+
+Salle Virtuelle (id_salle_virtuelle PK, lien_connexion_salle_virtuelle)
+
+Cours (id_cours PK, numero_semaine_cours, numero_salle_virtuelle_cours, discipline_cours, id_intervenant FK)
+
+Facture (id_facture PK, date_reception_facture, date_previsionnelle_paiement_facture, nombre_heures_facture, taux_horaire_facture, tva_facture, date_intervention_facture, sujet_intervention_facture, id_intervenant FK)
+
+Avis Etudiant (id_avis PK, note_avis, commentaire_avis, id_etudiant FK)
